@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5ecd9">
+  <title>Aangan — New Tab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-wash" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Aangan home" data-view-link="home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 29C12 25 11 17 20 7C29 17 28 25 20 29Z"/><path d="M19 29C10 30 5 25 5 18C13 18 18 22 19 29Z"/><path d="M21 29C30 30 35 25 35 18C27 18 22 22 21 29Z"/><path d="M20 29V35M13 35H27"/><path d="M20 7V3"/></svg>
+        </span>
+        <span class="brand-copy"><strong>AANGAN</strong><small>your quiet corner</small></span>
+      </a>
+
+      <nav class="page-tabs" aria-label="New tab sections">
+        <button class="nav-tab active" type="button" data-view="home">Home</button>
+        <button class="nav-tab" type="button" data-view="links">Your links</button>
+        <button class="nav-tab" type="button" data-view="focus">Focus</button>
+      </nav>
+
+      <div class="top-actions">
+        <span class="top-date" id="top-date"></span>
+        <button class="icon-button customize-button" type="button" id="open-settings" aria-label="Customize Aangan" title="Customize">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/><path d="m19.4 13.5 1.1.8-1.2 2.1-1.3-.5a7.7 7.7 0 0 1-1.6.9l-.2 1.4h-2.4l-.3-1.4a7.7 7.7 0 0 1-1.6-.9l-1.3.5-1.2-2.1 1.1-.8a7.3 7.3 0 0 1 0-1.8l-1.1-.8 1.2-2.1 1.3.5a7.7 7.7 0 0 1 1.6-.9l.3-1.4h2.4l.2 1.4a7.7 7.7 0 0 1 1.6.9l1.3-.5 1.2 2.1-1.1.8a7.3 7.3 0 0 1 0 1.8Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="header-rule" aria-hidden="true"><span></span><i>✦</i><span></span></div>
+
+    <main id="main-view" class="main-view" tabindex="-1"></main>
+
+    <footer class="footer-note">
+      <span class="footer-flourish" aria-hidden="true">❧</span>
+      <span>Made for unhurried beginnings</span>
+      <span class="footer-flourish" aria-hidden="true">❧</span>
+    </footer>
+  </div>
+
+  <dialog id="settings-dialog" class="modal">
+    <form id="settings-form" method="dialog" class="modal-card">
+      <div class="modal-heading">
+        <div><span class="eyebrow">MAKE IT YOURS</span><h2>Personalize your Aangan</h2></div>
+        <button class="icon-button close-dialog" type="button" data-close-dialog aria-label="Close settings">×</button>
+      </div>
+      <label class="field-label" for="display-name">What should we call you?</label>
+      <input id="display-name" name="displayName" class="text-field" maxlength="32" placeholder="Your name (optional)">
+      <label class="field-label" for="search-engine">Search with</label>
+      <select id="search-engine" name="searchEngine" class="text-field">
+        <option value="google">Google</option>
+        <option value="duckduckgo">DuckDuckGo</option>
+        <option value="bing">Bing</option>
+      </select>
+      <label class="toggle-row"><span><strong>Show the clock</strong><small>Keep the live time on your home page</small></span><input id="show-clock" type="checkbox" name="showClock" checked><i aria-hidden="true"></i></label>
+      <div class="modal-actions"><button class="quiet-button" type="button" data-close-dialog>Cancel</button><button class="primary-button" type="submit">Save changes <span aria-hidden="true">↗</span></button></div>
+    </form>
+  </dialog>
+
+  <dialog id="shortcut-dialog" class="modal">
+    <form id="shortcut-form" method="dialog" class="modal-card">
+      <div class="modal-heading">
+        <div><span class="eyebrow">A LITTLE SHORTCUT</span><h2>Add a favourite</h2></div>
+        <button class="icon-button close-dialog" type="button" data-close-dialog aria-label="Close">×</button>
+      </div>
+      <label class="field-label" for="shortcut-name">Name</label>
+      <input id="shortcut-name" class="text-field" maxlength="28" required placeholder="e.g. My portfolio">
+      <label class="field-label" for="shortcut-url">Website address</label>
+      <input id="shortcut-url" class="text-field" type="text" required inputmode="url" placeholder="example.com">
+      <p class="field-hint">Enter a website address. We’ll add https:// when needed.</p>
+      <div class="modal-actions"><button class="quiet-button" type="button" data-close-dialog>Cancel</button><button class="primary-button" type="submit">Add shortcut <span aria-hidden="true">↗</span></button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

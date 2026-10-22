@@ -1,0 +1,117 @@
+{
+  "manifest_version": 3,
+  "name": "Aangan \u2014 Indian Art Chrome Theme",
+  "version": "1.0.1",
+  "description": "Warm parchment, ivory and antique-gold Chrome browser colours designed to match the Aangan Indian hand-drawn New Tab extension.",
+  "theme": {
+    "colors": {
+      "frame": [
+        232,
+        216,
+        188
+      ],
+      "frame_inactive": [
+        242,
+        232,
+        211
+      ],
+      "frame_incognito": [
+        232,
+        216,
+        188
+      ],
+      "frame_incognito_inactive": [
+        242,
+        232,
+        211
+      ],
+      "toolbar": [
+        248,
+        241,
+        225
+      ],
+      "tab_text": [
+        76,
+        55,
+        35
+      ],
+      "tab_background_text": [
+        113,
+        91,
+        65
+      ],
+      "bookmark_text": [
+        76,
+        55,
+        35
+      ],
+      "ntp_background": [
+        246,
+        235,
+        211
+      ],
+      "ntp_text": [
+        76,
+        55,
+        35
+      ],
+      "ntp_link": [
+        144,
+        91,
+        53
+      ],
+      "ntp_header": [
+        112,
+        82,
+        49
+      ],
+      "ntp_section": [
+        239,
+        225,
+        199
+      ],
+      "button_background": [
+        232,
+        216,
+        188
+      ],
+      "omnibox_background": [
+        255,
+        251,
+        242
+      ],
+      "omnibox_text": [
+        65,
+        49,
+        34
+      ],
+      "omnibox_background_inactive": [
+        247,
+        240,
+        225
+      ],
+      "omnibox_text_inactive": [
+        104,
+        85,
+        64
+      ],
+      "omnibox_border": [
+        185,
+        150,
+        101
+      ],
+      "omnibox_border_inactive": [
+        210,
+        191,
+        159
+      ]
+    }
+  },
+  "images": {
+    "theme_ntp_background": "assets/indian-line-art.png"
+  },
+  "properties": {
+    "ntp_background_alignment": "center",
+    "ntp_background_repeat": "no-repeat"
+  }
+}
